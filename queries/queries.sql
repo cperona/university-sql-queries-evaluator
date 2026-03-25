@@ -23,7 +23,7 @@ select asignatura.nombre,curso_escolar.anyo_inicio,curso_escolar.anyo_fin from a
 select distinct departamento.nombre from departamento left join profesor on departamento.id=profesor.id_departamento left join asignatura on profesor.id_profesor=asignatura.id_profesor left join grado on asignatura.id_grado=grado.id where grado.nombre='Grado en Ingeniería Informática (Plan 2015)';
 
 -- 9. Retorna un llistat amb tots els alumnes que s'han matriculat en alguna assignatura durant el curs escolar 2018/2019. (nombre, apellido1, apellido2)
-select nombre,apellido1,apellido2 from persona left join alumno_se_matricula_asignatura on persona.id=alumno_se_matricula_asignatura.id_alumno left join curso_escolar on alumno_se_matricula_asignatura.id_curso_escolar=curso_escolar.id where anyo_inicio='2018/2019';
+select nombre,apellido1,apellido2 from persona left join alumno_se_matricula_asignatura on persona.id=alumno_se_matricula_asignatura.id_alumno left join curso_escolar on alumno_se_matricula_asignatura.id_curso_escolar=curso_escolar.id where anyo_inicio='2018' or anyo_inicio='2019';
 
 -- Resol les 6 següents consultes utilitzant les clàusules LEFT JOIN i RIGHT JOIN.
 -- 10. Retorna un llistat amb els noms de tots els professors/es i els departaments que tenen vinculats. El llistat també ha de mostrar aquells professors/es que no tenen cap departament associat. El llistat ha de retornar quatre columnes, nom del departament, primer cognom, segon cognom i nom del professor/a. El resultat estarà ordenat alfabèticament de menor a major pel nom del departament, cognoms i el nom. (departamento, apellido1, apellido2, nombre)
