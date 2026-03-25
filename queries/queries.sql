@@ -39,7 +39,7 @@ select nombre from departamento left join profesor on departamento.id=profesor.i
 select persona.id,apellido1,apellido2,persona.nombre from persona where tipo='profesor' and persona.id not in (select id_profesor from asignatura);
 
 -- 14. Retorna un llistat amb les assignatures que no tenen un professor/a assignat. (id, nombre)
-
+select id,nombre from asignatura where id_profesor is NULL;
 
 -- 15. Retorna un llistat amb tots els departaments que no han impartit assignatures en cap curs escolar. (nombre)
 
