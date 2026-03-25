@@ -33,7 +33,7 @@ select departamento.nombre as departamento,persona.apellido1,persona.apellido2,p
 select apellido1,apellido2,nombre from persona left join profesor on persona.id=profesor.id_profesor where profesor.id_departamento=NULL;
 
 -- 12. Retorna un llistat amb els departaments que no tenen professors/es associats. (nombre)
-
+select nombre from departamento left join profesor on departamento.id=profesor.id_departamento where profesor.id_departamento is NULL;
 
 -- 13. Retorna un llistat amb els professors/es que no imparteixen cap assignatura. (apellido1, apellido2, nombre)
 
