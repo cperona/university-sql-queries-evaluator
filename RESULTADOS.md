@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 5 correctas de 9 queries
+✅ 6 correctas de 9 queries
 
 ## ❌ Query 1: Incorrecto
 ```diff
@@ -49,41 +49,28 @@
 +Ismael | Strosin | Turcotte
 ```
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.38 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
-## ❌ Query 2: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,3 +1,8 @@
- nombre | apellido1 | apellido2
- Pedro | Heller | Pagac
- Ismael | Strosin | Turcotte
-+Esther | Spencer | Lakin
-+Carmen | Streich | Hirthe
-+Antonio | Fahey | Considine
-+Guillermo | Ruecker | Upton
-+Francesca | Schowalter | Muller
-```
+## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 3: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 4: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -109,29 +96,29 @@
  74.00 | Metabolismo y biosíntesis de biomoléculas | 1.00 | 3.00 | 7.00
 ```
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.40 ms
+⏱ Tiempo: 0.43 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.41 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,nif, PRIMARY, PRIMARY,id_asignatura
+⏱ Tiempo: 0.42 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,nif, PRIMARY,id_asignatura
 
 ---
 
 ## ✅ Query 8: Correcto
 
-⏱ Tiempo: 0.38 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY, id_profesor,id_grado
+⏱ Tiempo: 0.44 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor,id_grado, PRIMARY,id_departamento
 
 ---
 
