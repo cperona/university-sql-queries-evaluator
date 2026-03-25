@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 2 correctas de 8 queries
+✅ 2 correctas de 9 queries
 
 ## ❌ Query 1: Incorrecto
 ```diff
@@ -49,7 +49,7 @@
 +Ismael | Strosin | Turcotte
 ```
 
-⏱ Tiempo: 0.38 ms
+⏱ Tiempo: 0.44 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -69,7 +69,7 @@
 +Francesca | Schowalter | Muller
 ```
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.34 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -87,7 +87,7 @@
 +22.00 | 41491230N | Antonio | Domínguez | Guerrero | Almería | C/ Cabo de Gata | 626652498 | 1999-02-11 | H | alumno
 ```
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.35 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -108,7 +108,7 @@
 +17.00 | 85869555K | Guillermo | Ruecker | Upton | Almería | C/ Sierra de Gádor | NULL | 1973-05-05 | H | profesor
 ```
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -147,7 +147,7 @@
 +77.00 | Técnicas instrumentales básicas | 4.50 | obligatoria | 3.00 | 1.00 | NULL | 7.00
 ```
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.38 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 🚨 **Problemas detectados:**
@@ -157,18 +157,52 @@
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.46 ms
+⏱ Tiempo: 0.44 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.47 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,nif, PRIMARY,id_asignatura
+⏱ Tiempo: 0.43 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura, PRIMARY,nif, PRIMARY
 
 ---
 
-## ❌ Query 8: Error
+## ❌ Query 8: Incorrecto
+```diff
+--- 
++++ 
+@@ -1,2 +1,22 @@
+ nombre
+ Informática
++Informática
++Informática
++Informática
++Informática
++Informática
++Informática
++Informática
++Informática
++Informática
++Informática
++Informática
++Informática
++Informática
++Informática
++Informática
++Informática
++Informática
++Informática
++Informática
++Informática
+```
+
+⏱ Tiempo: 0.42 ms
+✅ Se usó índice(s) en la consulta: id_profesor,id_grado, PRIMARY, PRIMARY,id_departamento
+
+---
+
+## ❌ Query 9: Error
 - **Descripción**: 'NoneType' object is not iterable
 
