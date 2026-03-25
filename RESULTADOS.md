@@ -49,7 +49,7 @@
 +Ismael | Strosin | Turcotte
 ```
 
-⏱ Tiempo: 0.44 ms
+⏱ Tiempo: 0.49 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -69,7 +69,7 @@
 +Francesca | Schowalter | Muller
 ```
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.34 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -108,7 +108,7 @@
 +17.00 | 85869555K | Guillermo | Ruecker | Upton | Almería | C/ Sierra de Gádor | NULL | 1973-05-05 | H | profesor
 ```
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -120,44 +120,31 @@
 ```diff
 --- 
 +++ 
-@@ -1,7 +1,17 @@
--id | nombre | cuatrimestre | curso | id_grado
--72.00 | Bases moleculares del desarrollo vegetal | 1.00 | 3.00 | 7.00
--73.00 | Fisiología animal | 1.00 | 3.00 | 7.00
--74.00 | Metabolismo y biosíntesis de biomoléculas | 1.00 | 3.00 | 7.00
--75.00 | Operaciones de separación | 1.00 | 3.00 | 7.00
--76.00 | Patología molecular de plantas | 1.00 | 3.00 | 7.00
--77.00 | Técnicas instrumentales básicas | 1.00 | 3.00 | 7.00
-+id | nombre | creditos | tipo | curso | cuatrimestre | id_profesor | id_grado
-+52.00 | Biologia celular | 6.00 | básica | 1.00 | 1.00 | NULL | 7.00
-+53.00 | Física | 6.00 | básica | 1.00 | 1.00 | NULL | 7.00
-+54.00 | Matemáticas I | 6.00 | básica | 1.00 | 1.00 | NULL | 7.00
-+55.00 | Química general | 6.00 | básica | 1.00 | 1.00 | NULL | 7.00
-+56.00 | Química orgánica | 6.00 | básica | 1.00 | 1.00 | NULL | 7.00
-+62.00 | Botánica agrícola | 6.00 | obligatoria | 2.00 | 1.00 | NULL | 7.00
-+63.00 | Fisiología vegetal | 6.00 | obligatoria | 2.00 | 1.00 | NULL | 7.00
-+64.00 | Genética molecular | 6.00 | obligatoria | 2.00 | 1.00 | NULL | 7.00
-+65.00 | Ingeniería bioquímica | 6.00 | obligatoria | 2.00 | 1.00 | NULL | 7.00
-+66.00 | Termodinámica y cinética química aplicada | 6.00 | obligatoria | 2.00 | 1.00 | NULL | 7.00
-+72.00 | Bases moleculares del desarrollo vegetal | 4.50 | obligatoria | 3.00 | 1.00 | NULL | 7.00
-+73.00 | Fisiología animal | 4.50 | obligatoria | 3.00 | 1.00 | NULL | 7.00
-+74.00 | Metabolismo y biosíntesis de biomoléculas | 6.00 | obligatoria | 3.00 | 1.00 | NULL | 7.00
-+75.00 | Operaciones de separación | 6.00 | obligatoria | 3.00 | 1.00 | NULL | 7.00
-+76.00 | Patología molecular de plantas | 4.50 | obligatoria | 3.00 | 1.00 | NULL | 7.00
-+77.00 | Técnicas instrumentales básicas | 4.50 | obligatoria | 3.00 | 1.00 | NULL | 7.00
+@@ -1,4 +1,14 @@
+ id | nombre | cuatrimestre | curso | id_grado
++52.00 | Biologia celular | 1.00 | 1.00 | 7.00
++53.00 | Física | 1.00 | 1.00 | 7.00
++54.00 | Matemáticas I | 1.00 | 1.00 | 7.00
++55.00 | Química general | 1.00 | 1.00 | 7.00
++56.00 | Química orgánica | 1.00 | 1.00 | 7.00
++62.00 | Botánica agrícola | 1.00 | 2.00 | 7.00
++63.00 | Fisiología vegetal | 1.00 | 2.00 | 7.00
++64.00 | Genética molecular | 1.00 | 2.00 | 7.00
++65.00 | Ingeniería bioquímica | 1.00 | 2.00 | 7.00
++66.00 | Termodinámica y cinética química aplicada | 1.00 | 2.00 | 7.00
+ 72.00 | Bases moleculares del desarrollo vegetal | 1.00 | 3.00 | 7.00
+ 73.00 | Fisiología animal | 1.00 | 3.00 | 7.00
+ 74.00 | Metabolismo y biosíntesis de biomoléculas | 1.00 | 3.00 | 7.00
 ```
 
-⏱ Tiempo: 0.40 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: id_grado
-
-🚨 **Problemas detectados:**
-⚠️ Evitar `SELECT *`. Usar solo las columnas necesarias.
 
 ---
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.54 ms
+⏱ Tiempo: 0.51 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -165,14 +152,14 @@
 ## ✅ Query 7: Correcto
 
 ⏱ Tiempo: 0.55 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,nif, PRIMARY,id_asignatura
+✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura, PRIMARY, PRIMARY,nif
 
 ---
 
 ## ✅ Query 8: Correcto
 
-⏱ Tiempo: 0.45 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor,id_grado, PRIMARY,id_departamento
+⏱ Tiempo: 0.43 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY, id_profesor,id_grado
 
 ---
 
