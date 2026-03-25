@@ -36,7 +36,7 @@ select apellido1,apellido2,nombre from persona left join profesor on persona.id=
 select nombre from departamento left join profesor on departamento.id=profesor.id_departamento where profesor.id_departamento is NULL;
 
 -- 13. Retorna un llistat amb els professors/es que no imparteixen cap assignatura. (apellido1, apellido2, nombre)
-select persona.id,apellido1,apellido2,persona.nombre from persona where tipo='profesor' and persona.id not in (select id_profesor from asignatura);
+SELECT p.apellido1, p.apellido2, p.nombre from persona p join profesor pr on p.id = pr.id_profesor left join asignatura a on pr.id_profesor = a.id_profesor where a.id is null;
 
 -- 14. Retorna un llistat amb les assignatures que no tenen un professor/a assignat. (id, nombre)
 select id,nombre from asignatura where id_profesor is NULL;
@@ -54,7 +54,7 @@ select count(*) from persona where tipo='alumno' and year(fecha_nacimiento)='199
 select departamento.nombre as departamento,(select count(*) from profesor where profesor.id_departamento=departamento.id) as total from departamento;
 
 -- 19. Retorna un llistat amb tots els departaments i el nombre de professors/es que hi ha en cadascun d'ells. Tingui en compte que poden existir departaments que no tenen professors/es associats. Aquests departaments també han d'aparèixer en el llistat. (departamento, total)
-
+select 
 
 -- 20. Retorna un llistat amb el nom de tots els graus existents en la base de dades i el nombre d'assignatures que té cadascun. Tingues en compte que poden existir graus que no tenen assignatures associades. Aquests graus també han d'aparèixer en el llistat. El resultat haurà d'estar ordenat de major a menor pel nombre d'assignatures. (grau, total)
 
