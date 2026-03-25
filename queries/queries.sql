@@ -45,13 +45,13 @@ select id,nombre from asignatura where id_profesor is NULL;
 
 
 -- 16. Retorna el nombre total d'alumnes que hi ha. (total)
-
+select count(*) from persona where tipo='alumno';
 
 -- 17. Calcula quants alumnes van néixer en 1999. (total)
-
+select count(*) from persona where tipo='alumno' and year(fecha_nacimiento)='1999';
 
 -- 18. Calcula quants professors/es hi ha en cada departament. El resultat només ha de mostrar dues columnes, una amb el nom del departament i una altra amb el nombre de professors/es que hi ha en aquest departament. El resultat només ha d'incloure els departaments que tenen professors/es associats i haurà d'estar ordenat de major a menor pel nombre de professors/es. (departamento, total)
-
+select departamento.nombre as departamento,(select count(*) from profesor where profesor.id_departamento=departamento.id) as total from departamento;
 
 -- 19. Retorna un llistat amb tots els departaments i el nombre de professors/es que hi ha en cadascun d'ells. Tingui en compte que poden existir departaments que no tenen professors/es associats. Aquests departaments també han d'aparèixer en el llistat. (departamento, total)
 
