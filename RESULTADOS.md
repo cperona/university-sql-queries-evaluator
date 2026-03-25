@@ -9,44 +9,31 @@
 --- 
 +++ 
 @@ -1,13 +1,25 @@
--apellido1 | apellido2 | nombre
--Domínguez | Guerrero | Antonio
--Gea | Ruiz | Sonia
--Gutiérrez | López | Juan
--Heller | Pagac | Pedro
--Herman | Pacocha | Daniel
--Hernández | Martínez | Irene
--Herzog | Tremblay | Ramón
--Koss | Bayer | José
--Lakin | Yundt | Inma
--Saez | Vega | Juan
--Sánchez | Pérez | Salvador
--Strosin | Turcotte | Ismael
-+nombre | apellido1 | apellido2
-+Antonio | Domínguez | Guerrero
-+Antonio | Fahey | Considine
-+Sonia | Gea | Ruiz
-+Juan | Gutiérrez | López
-+Manolo | Hamill | Kozey
-+Pedro | Heller | Pagac
-+Daniel | Herman | Pacocha
-+Irene | Hernández | Martínez
-+Ramón | Herzog | Tremblay
-+Alejandro | Kohler | Schoen
-+José | Koss | Bayer
-+Inma | Lakin | Yundt
-+Cristina | Lemke | Rutherford
-+Micaela | Monahan | Murray
-+Zoe | Ramirez | Gea
-+Guillermo | Ruecker | Upton
-+Juan | Saez | Vega
-+Salvador | Sánchez | Pérez
-+David | Schmidt | Fisher
-+Francesca | Schowalter | Muller
-+Esther | Spencer | Lakin
-+Alfredo | Stiedemann | Morissette
-+Carmen | Streich | Hirthe
-+Ismael | Strosin | Turcotte
+ apellido1 | apellido2 | nombre
+ Domínguez | Guerrero | Antonio
++Fahey | Considine | Antonio
+ Gea | Ruiz | Sonia
+ Gutiérrez | López | Juan
++Hamill | Kozey | Manolo
+ Heller | Pagac | Pedro
+ Herman | Pacocha | Daniel
+ Hernández | Martínez | Irene
+ Herzog | Tremblay | Ramón
++Kohler | Schoen | Alejandro
+ Koss | Bayer | José
+ Lakin | Yundt | Inma
++Lemke | Rutherford | Cristina
++Monahan | Murray | Micaela
++Ramirez | Gea | Zoe
++Ruecker | Upton | Guillermo
+ Saez | Vega | Juan
+ Sánchez | Pérez | Salvador
++Schmidt | Fisher | David
++Schowalter | Muller | Francesca
++Spencer | Lakin | Esther
++Stiedemann | Morissette | Alfredo
++Streich | Hirthe | Carmen
+ Strosin | Turcotte | Ismael
 ```
 
 ⏱ Tiempo: 0.38 ms
@@ -56,21 +43,21 @@
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 3: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 4: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -96,29 +83,29 @@
  74.00 | Metabolismo y biosíntesis de biomoléculas | 1.00 | 3.00 | 7.00
 ```
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.33 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.43 ms
+⏱ Tiempo: 0.41 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.42 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,nif, PRIMARY,id_asignatura
+⏱ Tiempo: 0.41 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_asignatura, PRIMARY,nif
 
 ---
 
 ## ✅ Query 8: Correcto
 
-⏱ Tiempo: 0.44 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor,id_grado, PRIMARY,id_departamento
+⏱ Tiempo: 0.39 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento, id_profesor,id_grado
 
 ---
 
