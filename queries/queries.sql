@@ -8,7 +8,7 @@ select nombre,apellido1,apellido2 from persona where telefono is NULL;
 select * from persona where tipo='alumno' and year(fecha_nacimiento) = 1999;
 
 -- 4. Retorna el llistat de professors/es que no han donat d'alta el seu número de telèfon en la base de dades i a més el seu NIF acaba en K. (nombre, apellido1, apellido2, nif)
-select * from persona where tipo='profesor' and right(nif,1)='K';
+select nombre,apellido1,apellido2,nif from persona where tipo='profesor' and right(nif,1)='K';
 
 -- 5. Retorna el llistat de les assignatures que s'imparteixen en el primer quadrimestre, en el tercer curs del grau que té l'identificador 7. (id, nombre, cuatrimestre, curso, id_grado)
 select id,nombre,cuatrimestre,curso,id_grado from asignatura where cuatrimestre=1 and id_grado=7;
