@@ -45,7 +45,7 @@ select id,nombre from asignatura where id_profesor is NULL;
 
 
 -- 16. Retorna el nombre total d'alumnes que hi ha. (total)
-select count(*) from persona where tipo='alumno';
+select count(*) as total from persona where tipo='alumno';
 
 -- 17. Calcula quants alumnes van néixer en 1999. (total)
 select count(*) from persona where tipo='alumno' and year(fecha_nacimiento)='1999';
