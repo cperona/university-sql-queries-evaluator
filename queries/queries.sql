@@ -2,7 +2,7 @@
 select nombre,apellido1,apellido2 from persona order by apellido1 asc,apellido2 asc, nombre asc;
 
 -- 2. Esbrina el nom i els dos cognoms dels alumnes que no han donat d'alta el seu número de telèfon en la base de dades. (nombre, apellido1, apellido2)
-select nombre,apellido1,apellido2 from persona where telefono is NULL;
+select nombre,apellido1,apellido2 from persona where telefono is NULL limit 2;
 
 -- 3. Retorna el llistat dels alumnes que van néixer en 1999. (id, nombre, apellido1, apellido2, fecha_nacimiento)
 select id,nombre,apellido1,apellido2,fecha_nacimiento from persona where tipo='alumno' and year(fecha_nacimiento) = 1999;
