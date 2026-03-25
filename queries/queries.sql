@@ -30,7 +30,7 @@ select distinct nombre,apellido1,apellido2 from persona left join alumno_se_matr
 select departamento.nombre as departamento,persona.apellido1,persona.apellido2,persona.nombre from persona left join profesor on persona.id=profesor.id_profesor left join departamento on profesor.id_departamento=departamento.id where persona.tipo='profesor' order by departamento.nombre,persona.apellido1,persona.apellido2,persona.nombre;
 
 -- 11. Retorna un llistat amb els professors/es que no estan associats a un departament. (apellido1, apellido2, nombre)
-
+select apellido1,apellido2,nombre from persona left join profesor on persona.id=profesor.id_profesor where profesor.id_departamento != 2;
 
 -- 12. Retorna un llistat amb els departaments que no tenen professors/es associats. (nombre)
 
