@@ -10,7 +10,7 @@ select id,nombre,apellido1,apellido2,fecha_nacimiento from persona where tipo='a
 -- 4. Retorna el llistat de professors/es que no han donat d'alta el seu número de telèfon en la base de dades i a més el seu NIF acaba en K. (nombre, apellido1, apellido2, nif)
 select nombre,apellido1,apellido2,nif from persona where tipo='profesor' and right(nif,1)='K';
 
--- 5. Retorna el llistat de les assignatures que s'imparteixen en el primer quadrimestre, en el tercer curs del grau que té l'identificador 7. (id, nombre, cuatrimestre, curso, id_grado)
+-- 5. Retorna el llistat de les assignatures que s'imparteixen en el primer quadrimestre, en el tercer curs i en el grau que té l'identificador 7. (id, nombre, cuatrimestre, curso, id_grado)
 select id,nombre,cuatrimestre,curso,id_grado from asignatura where cuatrimestre=1 and curso=3 and id_grado=7;
 
 -- 6. Retorna un llistat dels professors/es juntament amb el nom del departament al qual estan vinculats. El llistat ha de retornar quatre columnes, primer cognom, segon cognom, nom i nom del departament. El resultat estarà ordenat alfabèticament de menor a major pels cognoms i el nom. (apellido1, apellido2, nombre, departamento)
