@@ -2,68 +2,68 @@
 
 
 ## 📈 Resumen
-✅ 12 correctas de 13 queries
+✅ 12 correctas de 14 queries
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.46 ms
+⏱ Tiempo: 0.44 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.38 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 3: Correcto
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.39 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 4: Correcto
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.37 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 5: Correcto
 
-⏱ Tiempo: 0.43 ms
+⏱ Tiempo: 0.37 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.47 ms
+⏱ Tiempo: 0.48 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.46 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,nif, PRIMARY,id_asignatura
+⏱ Tiempo: 0.43 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_asignatura, PRIMARY,nif
 
 ---
 
 ## ✅ Query 8: Correcto
 
-⏱ Tiempo: 0.42 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor,id_grado, PRIMARY,id_departamento
+⏱ Tiempo: 0.47 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, id_profesor,id_grado, PRIMARY
 
 ---
 
 ## ✅ Query 9: Correcto
 
-⏱ Tiempo: 0.38 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_curso_escolar
+⏱ Tiempo: 0.39 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
 
 ---
 
@@ -76,7 +76,7 @@
 
 ## ✅ Query 11: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -86,13 +86,38 @@
 
 ## ✅ Query 12: Correcto
 
-⏱ Tiempo: 0.41 ms
+⏱ Tiempo: 0.31 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
 
-## ❌ Query 13: Error
-- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'asd
+## ❌ Query 13: Incorrecto
+```diff
+--- 
++++ 
+@@ -1,11 +1 @@
+-apellido1 | apellido2 | nombre
+-Schmidt | Fisher | David
+-Kohler | Schoen | Alejandro
+-Lemke | Rutherford | Cristina
+-Fahey | Considine | Antonio
+-Spencer | Lakin | Esther
+-Streich | Hirthe | Carmen
+-Ruecker | Upton | Guillermo
+-Monahan | Murray | Micaela
+-Stiedemann | Morissette | Alfredo
+-Schowalter | Muller | Francesca
++id | apellido1 | apellido2 | nombre
+```
 
--- 14. Retorna un llistat amb les assignatures que no tenen un professor/a ' at line 2
+⏱ Tiempo: 0.41 ms
+✅ Se usó índice(s) en la consulta: id_profesor
+
+🚨 **Problemas detectados:**
+⚠️ Considerar `EXISTS` en lugar de `IN` para eficiencia.
+
+---
+
+## ❌ Query 14: Error
+- **Descripción**: 'NoneType' object is not iterable
 
