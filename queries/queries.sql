@@ -5,7 +5,7 @@ select nombre,apellido1,apellido2 from persona order by apellido1 asc,apellido2 
 select nombre,apellido1,apellido2 from persona where telefono is NULL;
 
 -- 3. Retorna el llistat dels alumnes que van néixer en 1999. (id, nombre, apellido1, apellido2, fecha_nacimiento)
-select * from persona where tipo='alumno' and year(fecha_nacimiento) = 1999;
+select id,nombre,apellido1,apellido2,fecha_nacimiento from persona where tipo='alumno' and year(fecha_nacimiento) = 1999;
 
 -- 4. Retorna el llistat de professors/es que no han donat d'alta el seu número de telèfon en la base de dades i a més el seu NIF acaba en K. (nombre, apellido1, apellido2, nif)
 select nombre,apellido1,apellido2,nif from persona where tipo='profesor' and right(nif,1)='K';
