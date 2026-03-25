@@ -11,7 +11,7 @@ select * from persona where tipo='alumno' and year(fecha_nacimiento) = 1999;
 select * from persona where tipo='profesor' and right(nif,1)='K';
 
 -- 5. Retorna el llistat de les assignatures que s'imparteixen en el primer quadrimestre, en el tercer curs del grau que té l'identificador 7. (id, nombre, cuatrimestre, curso, id_grado)
-select * from asignatura where cuatrimestre=1 and id_grado=7;
+select id,nombre,cuatrimestre,curso,id_grado from asignatura where cuatrimestre=1 and id_grado=7;
 
 -- 6. Retorna un llistat dels professors/es juntament amb el nom del departament al qual estan vinculats. El llistat ha de retornar quatre columnes, primer cognom, segon cognom, nom i nom del departament. El resultat estarà ordenat alfabèticament de menor a major pels cognoms i el nom. (apellido1, apellido2, nombre, departamento)
 select apellido1,apellido2,persona.nombre,departamento.nombre as departamento from persona left join profesor on persona.id=profesor.id_profesor left join departamento on profesor.id_departamento=departamento.id where tipo='profesor' order by apellido1,apellido2,nombre;
