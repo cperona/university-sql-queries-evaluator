@@ -17,7 +17,7 @@ select * from asignatura where cuatrimestre=1 and id_grado=7;
 select apellido1,apellido2,persona.nombre,departamento.nombre as departamento from persona left join profesor on persona.id=profesor.id_profesor left join departamento on profesor.id_departamento=departamento.id where tipo='profesor' order by apellido1,apellido2,nombre;
 
 -- 7. Retorna un llistat amb el nom de les assignatures, any d'inici i any de fi del curs escolar de l'alumne/a amb NIF 26902806M. (nombre, anyo_inicio, anyo_fin)
-
+select asignatura.nombre,curso_escolar.anyo_inicio,curso_escolar.anyo_fin from asignatura left join curso_escolar on asignatura.curso=curso_escolar.id left join alumno_se_matricula_asignatura on asignatura.id=alumno_se_matricula_asignatura.id_asignatura left join persona on alumno_se_matricula_asignatura.id_alumno=persona.id where persona.nif='26902806M';
 
 -- 8. Retorna un llistat amb el nom de tots els departaments que tenen professors/es que imparteixen alguna assignatura en el Grau en Enginyeria Informàtica (Pla 2015). (nombre)
 
