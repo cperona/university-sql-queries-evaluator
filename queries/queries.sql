@@ -27,7 +27,7 @@ select distinct nombre,apellido1,apellido2 from persona left join alumno_se_matr
 
 -- Resol les 6 següents consultes utilitzant les clàusules LEFT JOIN i RIGHT JOIN.
 -- 10. Retorna un llistat amb els noms de tots els professors/es i els departaments que tenen vinculats. El llistat també ha de mostrar aquells professors/es que no tenen cap departament associat. El llistat ha de retornar quatre columnes, nom del departament, primer cognom, segon cognom i nom del professor/a. El resultat estarà ordenat alfabèticament de menor a major pel nom del departament, cognoms i el nom. (departamento, apellido1, apellido2, nombre)
-
+select departamento.nombre as departamento,persona.apellido1,persona.apellido2,persona.nombre from persona left join profesor on persona.id=profesor.id_profesor left join departamento on profesor.id_departamento=departamento.id where persona.tipo='profesor' order by departamento.nombre,persona.apellido1,persona.apellido2,persona.nombre;
 
 -- 11. Retorna un llistat amb els professors/es que no estan associats a un departament. (apellido1, apellido2, nombre)
 
