@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 2 correctas de 9 queries
+✅ 3 correctas de 9 queries
 
 ## ❌ Query 1: Incorrecto
 ```diff
@@ -69,7 +69,7 @@
 +Francesca | Schowalter | Muller
 ```
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -87,7 +87,7 @@
 +22.00 | 41491230N | Antonio | Domínguez | Guerrero | Almería | C/ Cabo de Gata | 626652498 | 1999-02-11 | H | alumno
 ```
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.34 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -108,7 +108,7 @@
 +17.00 | 85869555K | Guillermo | Ruecker | Upton | Almería | C/ Sierra de Gádor | NULL | 1973-05-05 | H | profesor
 ```
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.37 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -147,7 +147,7 @@
 +77.00 | Técnicas instrumentales básicas | 4.50 | obligatoria | 3.00 | 1.00 | NULL | 7.00
 ```
 
-⏱ Tiempo: 0.38 ms
+⏱ Tiempo: 0.40 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 🚨 **Problemas detectados:**
@@ -157,49 +157,22 @@
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.44 ms
+⏱ Tiempo: 0.54 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.43 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura, PRIMARY,nif, PRIMARY
+⏱ Tiempo: 0.55 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,nif, PRIMARY,id_asignatura
 
 ---
 
-## ❌ Query 8: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,2 +1,22 @@
- nombre
- Informática
-+Informática
-+Informática
-+Informática
-+Informática
-+Informática
-+Informática
-+Informática
-+Informática
-+Informática
-+Informática
-+Informática
-+Informática
-+Informática
-+Informática
-+Informática
-+Informática
-+Informática
-+Informática
-+Informática
-+Informática
-```
+## ✅ Query 8: Correcto
 
-⏱ Tiempo: 0.42 ms
-✅ Se usó índice(s) en la consulta: id_profesor,id_grado, PRIMARY, PRIMARY,id_departamento
+⏱ Tiempo: 0.45 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor,id_grado, PRIMARY,id_departamento
 
 ---
 
