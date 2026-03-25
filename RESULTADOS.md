@@ -2,18 +2,18 @@
 
 
 ## 📈 Resumen
-✅ 13 correctas de 18 queries
+✅ 14 correctas de 18 queries
 
 ## ✅ Query 1: Correcto
 
-⏱ Tiempo: 0.48 ms
+⏱ Tiempo: 0.39 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.35 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -27,56 +27,56 @@
 
 ## ✅ Query 4: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 5: Correcto
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.56 ms
+⏱ Tiempo: 0.43 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.52 ms
+⏱ Tiempo: 0.42 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura, PRIMARY,nif, PRIMARY
 
 ---
 
 ## ✅ Query 8: Correcto
 
-⏱ Tiempo: 0.47 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, id_profesor,id_grado, PRIMARY
+⏱ Tiempo: 0.44 ms
+✅ Se usó índice(s) en la consulta: id_profesor,id_grado, PRIMARY,id_departamento, PRIMARY
 
 ---
 
 ## ✅ Query 9: Correcto
 
-⏱ Tiempo: 0.39 ms
+⏱ Tiempo: 0.44 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
 
 ---
 
 ## ✅ Query 10: Correcto
 
-⏱ Tiempo: 0.44 ms
+⏱ Tiempo: 0.41 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
 ## ✅ Query 11: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.35 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -86,41 +86,21 @@
 
 ## ✅ Query 12: Correcto
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.37 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
 
-## ❌ Query 13: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,11 +1 @@
--apellido1 | apellido2 | nombre
--Schmidt | Fisher | David
--Kohler | Schoen | Alejandro
--Lemke | Rutherford | Cristina
--Fahey | Considine | Antonio
--Spencer | Lakin | Esther
--Streich | Hirthe | Carmen
--Ruecker | Upton | Guillermo
--Monahan | Murray | Micaela
--Stiedemann | Morissette | Alfredo
--Schowalter | Muller | Francesca
-+id | apellido1 | apellido2 | nombre
-```
+## ✅ Query 13: Correcto
 
-⏱ Tiempo: 0.45 ms
-✅ Se usó índice(s) en la consulta: id_profesor
-
-🚨 **Problemas detectados:**
-⚠️ Considerar `EXISTS` en lugar de `IN` para eficiencia.
+⏱ Tiempo: 0.38 ms
+✅ Se usó índice(s) en la consulta: id_profesor, PRIMARY
 
 ---
 
 ## ✅ Query 14: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.32 ms
 ✅ Se usó índice(s) en la consulta: id_profesor
 
 ---
@@ -144,7 +124,7 @@
 +12.00
 ```
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -160,7 +140,7 @@
 +2.00
 ```
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -190,5 +170,5 @@
 ---
 
 ## ❌ Query 18: Error
-- **Descripción**: 'NoneType' object is not iterable
+- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 22
 
