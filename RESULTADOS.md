@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 3 correctas de 9 queries
+✅ 4 correctas de 9 queries
 
 ## ❌ Query 1: Incorrecto
 ```diff
@@ -49,7 +49,7 @@
 +Ismael | Strosin | Turcotte
 ```
 
-⏱ Tiempo: 0.49 ms
+⏱ Tiempo: 0.37 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -69,7 +69,7 @@
 +Francesca | Schowalter | Muller
 ```
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -87,7 +87,7 @@
 +22.00 | 41491230N | Antonio | Domínguez | Guerrero | Almería | C/ Cabo de Gata | 626652498 | 1999-02-11 | H | alumno
 ```
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.35 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -95,24 +95,10 @@
 
 ---
 
-## ❌ Query 4: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,3 +1,3 @@
--nombre | apellido1 | apellido2 | nif
--Antonio | Fahey | Considine | 10485008K
--Guillermo | Ruecker | Upton | 85869555K
-+id | nif | nombre | apellido1 | apellido2 | ciudad | direccion | telefono | fecha_nacimiento | sexo | tipo
-+16.00 | 10485008K | Antonio | Fahey | Considine | Almería | C/ Sierra de los Filabres | NULL | 1982-03-18 | H | profesor
-+17.00 | 85869555K | Guillermo | Ruecker | Upton | Almería | C/ Sierra de Gádor | NULL | 1973-05-05 | H | profesor
-```
+## ✅ Query 4: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
-
-🚨 **Problemas detectados:**
-⚠️ Evitar `SELECT *`. Usar solo las columnas necesarias.
 
 ---
 
@@ -144,22 +130,22 @@
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.51 ms
+⏱ Tiempo: 0.41 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.55 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura, PRIMARY, PRIMARY,nif
+⏱ Tiempo: 0.40 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_asignatura, PRIMARY,nif
 
 ---
 
 ## ✅ Query 8: Correcto
 
-⏱ Tiempo: 0.43 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY, id_profesor,id_grado
+⏱ Tiempo: 0.39 ms
+✅ Se usó índice(s) en la consulta: id_profesor,id_grado, PRIMARY,id_departamento, PRIMARY
 
 ---
 
