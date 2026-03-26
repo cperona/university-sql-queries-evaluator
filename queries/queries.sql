@@ -1,4 +1,4 @@
--- 1. Retorna un llistat amb el primer cognom, segon cognom i el nom de tots els/les alumnes. El llistat haurà d'estar ordenat alfabèticament de menor a major pel primer cognom, segon cognom i nom.
+-1- 1. Retorna un llistat amb el primer cognom, segon cognom i el nom de tots els/les alumnes. El llistat haurà d'estar ordenat alfabèticament de menor a major pel primer cognom, segon cognom i nom.
 select apellido1,apellido2,nombre from persona where tipo='alumno' order by apellido1 asc,apellido2 asc, nombre asc;
 
 -- 2. Esbrina el nom i els dos cognoms dels alumnes que no han donat d'alta el seu número de telèfon en la base de dades. (nombre, apellido1, apellido2). Mostra només dos resultats.
@@ -54,7 +54,7 @@ select count(*) from persona where tipo='alumno' and year(fecha_nacimiento)='199
 select departamento.nombre as departamento,(select count(*) from profesor where profesor.id_departamento=departamento.id) as total from departamento;
 
 -- 19. Retorna un llistat amb tots els departaments i el nombre de professors/es que hi ha en cadascun d'ells. Tingui en compte que poden existir departaments que no tenen professors/es associats. Aquests departaments també han d'aparèixer en el llistat. (departamento, total)
-select 
+select d.nombre as departamento, count(pr.id_profesor) as total from departamento d left join profesor pr on d.id = pr.id_departamento group by d.id, d.nombre;
 
 -- 20. Retorna un llistat amb el nom de tots els graus existents en la base de dades i el nombre d'assignatures que té cadascun. Tingues en compte que poden existir graus que no tenen assignatures associades. Aquests graus també han d'aparèixer en el llistat. El resultat haurà d'estar ordenat de major a menor pel nombre d'assignatures. (grau, total)
 
