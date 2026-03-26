@@ -42,7 +42,7 @@ SELECT p.apellido1, p.apellido2, p.nombre from persona p join profesor pr on p.i
 select id,nombre from asignatura where id_profesor is NULL;
 
 -- 15. Retorna un llistat amb tots els departaments que no han impartit assignatures en cap curs escolar. (nombre)
-select departamento.nombre from departamento left join profesor on departamento.id = profesor.id_departamento left join asignatura on profesor.id_profesor = asignatura.id_profesor where asignatura.id is null;
+select distinct departamento.nombre from departamento left join profesor on departamento.id = profesor.id_departamento left join asignatura on profesor.id_profesor = asignatura.id_profesor where asignatura.id is null;
 
 -- 16. Retorna el nombre total d'alumnes que hi ha. (total)
 select count(*) as total from persona where tipo='alumno';
