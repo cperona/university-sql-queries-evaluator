@@ -2,68 +2,65 @@
 
 
 ## 📈 Resumen
-✅ 15 correctas de 19 queries
+✅ 15 correctas de 20 queries
 
-## ✅ Query 1: Correcto
+## ❌ Query 1: Error
+- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1- 1. Retorna un llistat amb el primer cognom, segon cognom i el nom de tots el' at line 1
 
-⏱ Tiempo: 0.44 ms
-🔍 No se usó ningún índice en esta consulta.
-
----
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.38 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 3: Correcto
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.34 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 4: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 5: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.42 ms
+⏱ Tiempo: 0.43 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.45 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura, PRIMARY,nif, PRIMARY
+⏱ Tiempo: 0.43 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,nif, PRIMARY,id_asignatura
 
 ---
 
 ## ✅ Query 8: Correcto
 
-⏱ Tiempo: 0.43 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, id_profesor,id_grado, PRIMARY
+⏱ Tiempo: 0.41 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_departamento, id_profesor,id_grado
 
 ---
 
 ## ✅ Query 9: Correcto
 
-⏱ Tiempo: 0.40 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
+⏱ Tiempo: 0.46 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, PRIMARY,id_curso_escolar
 
 ---
 
@@ -76,7 +73,7 @@
 
 ## ✅ Query 11: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.31 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -86,21 +83,21 @@
 
 ## ✅ Query 12: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
 
 ## ✅ Query 13: Correcto
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.36 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor
 
 ---
 
 ## ✅ Query 14: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.31 ms
 ✅ Se usó índice(s) en la consulta: id_profesor
 
 ---
@@ -126,14 +123,14 @@
  Derecho
 ```
 
-⏱ Tiempo: 0.34 ms
-✅ Se usó índice(s) en la consulta: id_departamento, id_profesor
+⏱ Tiempo: 0.35 ms
+✅ Se usó índice(s) en la consulta: id_profesor, id_departamento
 
 ---
 
 ## ✅ Query 16: Correcto
 
-⏱ Tiempo: 0.30 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -148,7 +145,7 @@
  2.00
 ```
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -172,11 +169,18 @@
 +Biología y Geología | 0.00
 ```
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.35 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
 
-## ❌ Query 19: Error
-- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 22
+## ✅ Query 19: Correcto
+
+⏱ Tiempo: 0.35 ms
+✅ Se usó índice(s) en la consulta: id_departamento
+
+---
+
+## ❌ Query 20: Error
+- **Descripción**: 'NoneType' object is not iterable
 
