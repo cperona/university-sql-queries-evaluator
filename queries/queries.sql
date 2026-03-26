@@ -1,4 +1,4 @@
--1- 1. Retorna un llistat amb el primer cognom, segon cognom i el nom de tots els/les alumnes. El llistat haurà d'estar ordenat alfabèticament de menor a major pel primer cognom, segon cognom i nom.
+-- 1. Retorna un llistat amb el primer cognom, segon cognom i el nom de tots els/les alumnes. El llistat haurà d'estar ordenat alfabèticament de menor a major pel primer cognom, segon cognom i nom.
 select apellido1,apellido2,nombre from persona where tipo='alumno' order by apellido1 asc,apellido2 asc, nombre asc;
 
 -- 2. Esbrina el nom i els dos cognoms dels alumnes que no han donat d'alta el seu número de telèfon en la base de dades. (nombre, apellido1, apellido2). Mostra només dos resultats.
@@ -51,7 +51,7 @@ select count(*) as total from persona where tipo='alumno';
 select count(*) from persona where tipo='alumno' and year(fecha_nacimiento)='1999';
 
 -- 18. Calcula quants professors/es hi ha en cada departament. El resultat només ha de mostrar dues columnes, una amb el nom del departament i una altra amb el nombre de professors/es que hi ha en aquest departament. El resultat només ha d'incloure els departaments que tenen professors/es associats i haurà d'estar ordenat de major a menor pel nombre de professors/es. (departamento, total)
-select departamento.nombre as departamento,(select count(*) from profesor where profesor.id_departamento=departamento.id) as total from departamento;
+select departamento.nombre as departamento,(select count(*) from profesor where profesor.id_departamento=departamento.id) as total from departamento order by total desc;
 
 -- 19. Retorna un llistat amb tots els departaments i el nombre de professors/es que hi ha en cadascun d'ells. Tingui en compte que poden existir departaments que no tenen professors/es associats. Aquests departaments també han d'aparèixer en el llistat. (departamento, total)
 select d.nombre as departamento, count(pr.id_profesor) as total from departamento d left join profesor pr on d.id = pr.id_departamento group by d.id, d.nombre;
