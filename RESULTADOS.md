@@ -2,7 +2,7 @@
 
 
 ## 📈 Resumen
-✅ 15 correctas de 21 queries
+✅ 16 correctas de 21 queries
 
 ## ❌ Query 1: Error
 - **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1- 1. Retorna un llistat amb el primer cognom, segon cognom i el nom de tots el' at line 1
@@ -10,21 +10,21 @@
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.42 ms
+⏱ Tiempo: 0.47 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 3: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.35 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 4: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.34 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -38,7 +38,7 @@
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.43 ms
+⏱ Tiempo: 0.44 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
@@ -46,34 +46,34 @@
 ## ✅ Query 7: Correcto
 
 ⏱ Tiempo: 0.44 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura, PRIMARY, PRIMARY,nif
+✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura, PRIMARY,nif, PRIMARY
 
 ---
 
 ## ✅ Query 8: Correcto
 
 ⏱ Tiempo: 0.40 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, id_profesor,id_grado, PRIMARY
+✅ Se usó índice(s) en la consulta: id_profesor,id_grado, PRIMARY,id_departamento, PRIMARY
 
 ---
 
 ## ✅ Query 9: Correcto
 
-⏱ Tiempo: 0.38 ms
+⏱ Tiempo: 0.45 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
 
 ---
 
 ## ✅ Query 10: Correcto
 
-⏱ Tiempo: 0.44 ms
+⏱ Tiempo: 0.46 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
 ## ✅ Query 11: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -90,14 +90,14 @@
 
 ## ✅ Query 13: Correcto
 
-⏱ Tiempo: 0.35 ms
-✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor
+⏱ Tiempo: 0.36 ms
+✅ Se usó índice(s) en la consulta: id_profesor, PRIMARY
 
 ---
 
 ## ✅ Query 14: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.32 ms
 ✅ Se usó índice(s) en la consulta: id_profesor
 
 ---
@@ -124,7 +124,7 @@
 ```
 
 ⏱ Tiempo: 0.36 ms
-✅ Se usó índice(s) en la consulta: id_departamento, id_profesor
+✅ Se usó índice(s) en la consulta: id_profesor, id_departamento
 
 ---
 
@@ -145,7 +145,7 @@
  2.00
 ```
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.34 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -176,24 +176,14 @@
 
 ## ✅ Query 19: Correcto
 
-⏱ Tiempo: 0.35 ms
+⏱ Tiempo: 0.39 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
 
-## ❌ Query 20: Incorrecto
-```diff
---- 
-+++ 
-@@ -1,4 +1,4 @@
--grau | total
-+nombre | count(asignatura.id)
- Grado en Ingeniería Informática (Plan 2015) | 51.00
- Grado en Biotecnología (Plan 2015) | 32.00
- Grado en Ingeniería Agrícola (Plan 2015) | 0.00
-```
+## ✅ Query 20: Correcto
 
-⏱ Tiempo: 0.36 ms
+⏱ Tiempo: 0.48 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
