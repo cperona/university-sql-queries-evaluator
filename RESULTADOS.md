@@ -2,15 +2,18 @@
 
 
 ## 📈 Resumen
-✅ 16 correctas de 21 queries
+✅ 17 correctas de 21 queries
 
-## ❌ Query 1: Error
-- **Descripción**: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1- 1. Retorna un llistat amb el primer cognom, segon cognom i el nom de tots el' at line 1
+## ✅ Query 1: Correcto
 
+⏱ Tiempo: 0.42 ms
+🔍 No se usó ningún índice en esta consulta.
+
+---
 
 ## ✅ Query 2: Correcto
 
-⏱ Tiempo: 0.47 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -24,56 +27,56 @@
 
 ## ✅ Query 4: Correcto
 
-⏱ Tiempo: 0.34 ms
+⏱ Tiempo: 0.33 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
 
 ## ✅ Query 5: Correcto
 
-⏱ Tiempo: 0.37 ms
+⏱ Tiempo: 0.38 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
 
 ## ✅ Query 6: Correcto
 
-⏱ Tiempo: 0.44 ms
+⏱ Tiempo: 0.46 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
 ## ✅ Query 7: Correcto
 
-⏱ Tiempo: 0.44 ms
-✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura, PRIMARY,nif, PRIMARY
+⏱ Tiempo: 0.45 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_asignatura, PRIMARY, PRIMARY,nif
 
 ---
 
 ## ✅ Query 8: Correcto
 
-⏱ Tiempo: 0.40 ms
-✅ Se usó índice(s) en la consulta: id_profesor,id_grado, PRIMARY,id_departamento, PRIMARY
+⏱ Tiempo: 0.42 ms
+✅ Se usó índice(s) en la consulta: PRIMARY,id_departamento, PRIMARY, id_profesor,id_grado
 
 ---
 
 ## ✅ Query 9: Correcto
 
-⏱ Tiempo: 0.45 ms
+⏱ Tiempo: 0.41 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY,id_curso_escolar, PRIMARY
 
 ---
 
 ## ✅ Query 10: Correcto
 
-⏱ Tiempo: 0.46 ms
+⏱ Tiempo: 0.44 ms
 ✅ Se usó índice(s) en la consulta: PRIMARY
 
 ---
 
 ## ✅ Query 11: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.34 ms
 🔍 No se usó ningún índice en esta consulta.
 
 🚨 **Problemas detectados:**
@@ -83,21 +86,21 @@
 
 ## ✅ Query 12: Correcto
 
-⏱ Tiempo: 0.33 ms
+⏱ Tiempo: 0.34 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
 
 ## ✅ Query 13: Correcto
 
-⏱ Tiempo: 0.36 ms
-✅ Se usó índice(s) en la consulta: id_profesor, PRIMARY
+⏱ Tiempo: 0.39 ms
+✅ Se usó índice(s) en la consulta: PRIMARY, id_profesor
 
 ---
 
 ## ✅ Query 14: Correcto
 
-⏱ Tiempo: 0.32 ms
+⏱ Tiempo: 0.33 ms
 ✅ Se usó índice(s) en la consulta: id_profesor
 
 ---
@@ -124,13 +127,13 @@
 ```
 
 ⏱ Tiempo: 0.36 ms
-✅ Se usó índice(s) en la consulta: id_profesor, id_departamento
+✅ Se usó índice(s) en la consulta: id_departamento, id_profesor
 
 ---
 
 ## ✅ Query 16: Correcto
 
-⏱ Tiempo: 0.31 ms
+⏱ Tiempo: 0.32 ms
 🔍 No se usó ningún índice en esta consulta.
 
 ---
@@ -154,36 +157,30 @@
 ```diff
 --- 
 +++ 
-@@ -1,7 +1,10 @@
- departamento | total
--Educación | 3.00
- Informática | 2.00
- Matemáticas | 2.00
+@@ -5,3 +5,6 @@
  Economía y Empresa | 2.00
-+Educación | 3.00
-+Agronomía | 1.00
  Química y Física | 2.00
--Agronomía | 1.00
+ Agronomía | 1.00
 +Filología | 0.00
 +Derecho | 0.00
 +Biología y Geología | 0.00
 ```
-
-⏱ Tiempo: 0.34 ms
-✅ Se usó índice(s) en la consulta: id_departamento
-
----
-
-## ✅ Query 19: Correcto
 
 ⏱ Tiempo: 0.39 ms
 ✅ Se usó índice(s) en la consulta: id_departamento
 
 ---
 
+## ✅ Query 19: Correcto
+
+⏱ Tiempo: 0.36 ms
+✅ Se usó índice(s) en la consulta: id_departamento
+
+---
+
 ## ✅ Query 20: Correcto
 
-⏱ Tiempo: 0.48 ms
+⏱ Tiempo: 0.37 ms
 ✅ Se usó índice(s) en la consulta: id_grado
 
 ---
